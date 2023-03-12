@@ -83,6 +83,8 @@ def main():
                 life -= 1
                 break
         
+        draw(player, elapsed_time, stars, life)
+
         if life <= 0:
             lost_text = FONT.render("You Lost", 1, "white")
             WIN.blit(lost_text, (WIDTH/2 - lost_text.get_width()/2, HEIGHT/2 - lost_text.get_height()/2))
@@ -90,7 +92,7 @@ def main():
             pygame.time.delay(4000)
             break
 
-        draw(player, elapsed_time, stars, life)
+        # draw(player, elapsed_time, stars, life)
     pygame.quit()
 
 if __name__ == "__main__":
